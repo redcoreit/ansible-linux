@@ -1,0 +1,15 @@
+apt install sudo
+sudo adduser redcoreit
+
+apt-get install i3 xorg suckless-tools nitrogen tilix
+
+exec --no-startup-id xrandr --output Virtual-1 --mode 2560x1600 --dpi 227
+exec --no-startup-id nitrogen --restore
+
+floating_minimum_size 500 x 300
+floating_maximum_size 2000 x 1500
+for_window [class="(?i)firefox" instance="^(?!Navigator$)"] floating enable
+
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:neovim-ppa/unstable
+
