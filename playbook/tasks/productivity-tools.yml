@@ -1,0 +1,17 @@
+- name: Install packages
+  become: true
+  apt:
+    name: [ "tmux", "fzf", "xclip", "screenkey", "tldr", "ripgrep", "x11-xkb-utils" ]
+  tags:
+    - install
+    - productivity
+
+- name: Create symbolic link for hungarian-vim keyboard layout
+  become: true
+  file:
+    src: "{{ lookup('env', 'HOME') }}/dotfiles/hungarian-vim"
+    dest: "/usr/share/X11/xkb/symbols/hungarian-vim"
+    state: link
+  tags:
+    - install
+    - productivity
