@@ -15,4 +15,3 @@
       - core
   tasks:
     - include: tasks/ssh.yml
-    
