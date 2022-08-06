@@ -33,6 +33,6 @@
   with_fileglob:
   - "{{ lookup('env', 'HOME') }}/.ssh/*.pub"
 - name: Evaluating the authentication agent & adding the key...
-    shell: |
-      eval "$(ssh-agent)"
-      ssh-add {{ dest_key }}
+  shell: |
+    eval "$(ssh-agent)"
+    ssh-add {{ dest_key }}
