@@ -34,3 +34,7 @@
     line: IdentityFile {{ dest_key }}
     regexp: '^IdentityFile {{ dest_key }}$'
     create: yes
+  tags:
+    - dotfiles
+    - install
+    - ssh

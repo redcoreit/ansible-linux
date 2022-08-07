@@ -20,7 +20,7 @@
     - stow
 
 - name: Stow dotfiles
-  shell: cd $HOME/dotfiles && ./stow-dotfiles
+  shell: ./stow-dotfiles
   tags:
     - install
     - dotfiles
