@@ -15,4 +15,5 @@
       - core
   tasks:
     - include: tasks/ssh.yml
+    - include: tasks/git-setup.yml
     - include: tasks/dotfiles.yml
