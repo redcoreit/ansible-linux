@@ -28,14 +28,6 @@
     - install
     - ssh
 
-- name: Set authorized key took from file
-  authorized_key:
-    user: "{{ lookup('env', 'USER') }}"
-    state: present
-    key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa_redcoreit_github.pub"
-  with_fileglob:
-  - "{{ lookup('env', 'HOME') }}/.ssh/*.pub"
-
 - name: Add a line to a file if the file does not exist, without passing regexp
   ansible.builtin.lineinfile:
     path: ~/.ssh/config
