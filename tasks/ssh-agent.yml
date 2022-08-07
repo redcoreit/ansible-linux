@@ -2,5 +2,3 @@
   shell: |
     eval "$(ssh-agent)"
     ssh-add {{ dest_key }}
-  tag:
-    - ssh-agent
