@@ -19,6 +19,11 @@
     - dotfiles
     - stow
 
+- name: Change stow-dotfiles permissions
+  ansible.builtin.file:
+    path: ./stow-dotfiles
+    mode: '0700'
+
 - name: Stow dotfiles
   shell: ./stow-dotfiles
   tags:
