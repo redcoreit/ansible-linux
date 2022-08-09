@@ -19,14 +19,11 @@
     - dotfiles
     - stow
 
-- name: Change stow-dotfiles permissions
-  ansible.builtin.file:
-    path: ../scripts/stow-dotfiles
-    mode: '0700'
-    become_user: redcoreit
-
 - name: Stow dotfiles
-  shell: ../scripts/stow-dotfiles
+  shell: |
+    chmod 700 ../scripts/stow-dotfiles
+    ../scripts/stow-dotfiles
+  become_user: redcoreit
   tags:
     - install
     - dotfiles

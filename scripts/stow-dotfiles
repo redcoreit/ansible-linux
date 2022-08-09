@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-rm ~/.zsrc
+rm ~/.zshrc
 
 if [[ -z $STOW_FOLDERS ]]; then
     STOW_FOLDERS="i3,nvim,zsh"
