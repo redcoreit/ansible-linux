@@ -23,6 +23,7 @@
   ansible.builtin.file:
     path: ../scripts/stow-dotfiles
     mode: '0700'
+    become_user: redcoreit
 
 - name: Stow dotfiles
   shell: ../scripts/stow-dotfiles
