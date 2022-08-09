@@ -1,6 +1,6 @@
-- name: Install Mate with i3
+- name: Install i3 and tools
   become: true
   apt:
-    name: [ "xorg", "nitrogen", "kitty", "compton", "i3", "ubuntu-mate-desktop" ]
+    name: [ "xorg", "nitrogen", "kitty", "compton", "i3" ]
   tags:
     - i3
