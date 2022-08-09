@@ -19,4 +19,6 @@
     - include: tasks/core-setup.yml
     - include: tasks/zsh-setup.yml
     - include: tasks/nvim-setup.yml
+    - include: tasks/mate-setup.yml
+    - include: tasks/i3-setup.yml
     - include: tasks/dotfiles.yml

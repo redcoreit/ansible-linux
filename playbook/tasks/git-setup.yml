@@ -11,6 +11,7 @@
           32653337383232623361653865303635653432366163666564353365383064643466
   tags:
   - git-personal
+  - install
 
 - name: Git personal setup name
   git_config:
@@ -19,3 +20,4 @@
     value: "Roland Halbaksz"
   tags:
   - git-personal
+  - install
