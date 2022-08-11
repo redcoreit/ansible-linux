@@ -1,5 +1,6 @@
 - hosts: localhost
   vars:
+    cuser: "redcoreit"
     source_key: "../.ssh/id_rsa_redcoreit_github"
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa_redcoreit_github"
     personal: "{{ lookup('env', 'HOME') }}/personal"

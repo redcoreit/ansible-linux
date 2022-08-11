@@ -10,7 +10,7 @@
 
 - name: Remove .oh-my-zsh from home dir
   stat:
-    path: /home/redcoreit/.oh-my-zsh
+    path: ~/.oh-my-zsh
   register: oh_my_stats
   tags: *tags_for_zsh_tasks
 
