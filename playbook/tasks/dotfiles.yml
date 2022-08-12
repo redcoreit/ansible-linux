@@ -23,7 +23,7 @@
   shell: |
     chmod 700 ../scripts/stow-dotfiles
     ../scripts/stow-dotfiles
-  become_user: {{ cuser }}
+  become_user: "{{ cuser }}"
   tags:
     - install
     - dotfiles
