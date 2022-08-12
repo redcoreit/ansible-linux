@@ -22,4 +22,5 @@
     - include: tasks/nvim-setup.yml
     - include: tasks/mate-setup.yml
     - include: tasks/i3-setup.yml
+    - include: tasks/brave.yml
     - include: tasks/dotfiles.yml
