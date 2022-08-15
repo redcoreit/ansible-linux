@@ -22,6 +22,6 @@
     - include: tasks/mate-setup.yml
     - include: tasks/i3-setup.yml
     - include: tasks/brave.yml
-    - include: tasks/productivity-tools.yml
     - include: tasks/rust.yml
     - include: tasks/dotfiles.yml
+    - include: tasks/productivity-tools.yml
