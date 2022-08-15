@@ -5,3 +5,12 @@
   tags:
     - install
     - productivity
+
+- name: Create symbolic link 
+  file:
+    src: "{{ lookup('env', 'HOME') }}/dotfiles/hungarian-vim"
+    dest: "/usr/share/X11/xkb/symbols/hungarian-vim"
+    state: link
+  tags:
+    - install
+    - productivity
