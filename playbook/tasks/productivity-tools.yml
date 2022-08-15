@@ -6,7 +6,8 @@
     - install
     - productivity
 
-- name: Create symbolic link 
+- name: Create symbolic link for hungarian-vim keyboard layout
+  become: true
   file:
     src: "{{ lookup('env', 'HOME') }}/dotfiles/hungarian-vim"
     dest: "/usr/share/X11/xkb/symbols/hungarian-vim"
