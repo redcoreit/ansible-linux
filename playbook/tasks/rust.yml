@@ -28,3 +28,8 @@
     chmod +x ~/.local/bin/rust-analyzer
   tags:
     - rust
+
+- name: Install rust nightly toolchain
+  shell: rustup toolchain install nightly
+  tags:
+    - rust
