@@ -4,6 +4,7 @@
   ignore_errors: yes
   tags:
     - rust
+    - alacritty
 
 - name: Download Installer
   when: cargo_exists is failed
@@ -14,12 +15,14 @@
     force: 'yes'
   tags:
     - rust
+    - alacritty
 
 - name: Install rust/cargo
   when: cargo_exists is failed
   shell: /tmp/sh.rustup.rs -y
   tags:
     - rust
+    - alacritty
 
 - name: Install rust-analyzer
   shell: |
@@ -28,8 +31,10 @@
     chmod +x ~/.local/bin/rust-analyzer
   tags:
     - rust
+    - alacritty
 
 - name: Install rust nightly toolchain
   shell: rustup toolchain install nightly
   tags:
     - rust
+    - alacritty

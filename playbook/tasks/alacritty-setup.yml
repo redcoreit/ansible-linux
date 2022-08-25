@@ -1,0 +1,29 @@
+- name: Remove Alacritty
+  shell: rm -rf ~/alacritty
+  tags:
+    - alacritty
+
+- name: Clone Alacritty
+  ansible.builtin.git:
+    repo: 'https://github.com/alacritty/alacritty.git'
+    dest: "{{ lookup('env', 'HOME') }}/alacritty"
+  tags:
+    - alacritty
+
+- name: Install build tools
+  become: true
+  apt:
+    name: [ "libfreetype6-dev", "libfontconfig1-dev", "libxcb-xfixes0-dev", "libxkbcommon-dev", "python3" ]
+  tags:
+    - i3
+
+- name: Build Alacritty
+  shell: "cd {{ lookup('env', 'HOME') }}/alacritty && cargo build --release"
+  tags:
+    - alacritty
+
+- name: Install Alacritty
+  become: true
+  shell: "cd {{ lookup('env', 'HOME') }}/alacritty/ && cp target/release/alacritty /usr/local/bin"
+  tags:
+    - alacritty
