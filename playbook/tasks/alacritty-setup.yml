@@ -23,7 +23,7 @@
   apt:
     name: [ "libfreetype6-dev", "libfontconfig1-dev", "libxcb-xfixes0-dev", "libxkbcommon-dev", "python3" ]
   tags:
-    - i3
+    - alacritty
 
 - name: Build Alacritty
   shell: "cd {{ lookup('env', 'HOME') }}/alacritty && cargo build --release"
