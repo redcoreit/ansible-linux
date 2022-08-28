@@ -8,6 +8,8 @@
     src: /usr/lib/x86_64-linux-gnu/pkgconfig/fontconfig.pc
     dest: "{{ lookup('env', 'HOME') }}/.local/bin/fontconfig.pc"
     state: link
+  tags:
+    - alacritty
 
 - name: Clone Alacritty
   ansible.builtin.git:
