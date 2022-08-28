@@ -3,6 +3,12 @@
   tags:
     - alacritty
 
+- name: Create a symbolic link to fontconfig.pc
+  ansible.builtin.file:
+    src: /usr/lib/x86_64-linux-gnu/pkgconfig/fontconfig.pc
+    dest: "{{ lookup('env', 'HOME') }}/.local/bin/fontconfig.pc"
+    state: link
+
 - name: Clone Alacritty
   ansible.builtin.git:
     repo: 'https://github.com/alacritty/alacritty.git'
