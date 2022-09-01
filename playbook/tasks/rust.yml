@@ -19,7 +19,9 @@
 
 - name: Install rust/cargo
   when: cargo_exists is failed
-  shell: /tmp/sh.rustup.rs -y
+  shell: |
+    /tmp/sh.rustup.rs -y
+    source ~/.profile
   tags:
     - rust
     - alacritty
