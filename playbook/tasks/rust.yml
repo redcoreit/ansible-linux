@@ -21,7 +21,7 @@
   when: cargo_exists is failed
   shell: |
     /tmp/sh.rustup.rs -y
-    source ~/.profile
+    source ~/.cargo/env
   tags:
     - rust
     - alacritty
