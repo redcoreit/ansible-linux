@@ -2,7 +2,7 @@
 rm ~/.zshrc
 
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="i3,nvim,zsh,nitrogen,kitty,x11"
+    STOW_FOLDERS="i3,nvim,zsh,nitrogen,kitty,x11,alacritty"
 fi
 
 if [[ -z $DOTFILES ]]; then
