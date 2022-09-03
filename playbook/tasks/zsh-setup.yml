@@ -37,3 +37,9 @@
     repo: 'https://github.com/zdharma/fast-syntax-highlighting'
     dest: "~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting"
   tags: *tags_for_zsh_tasks
+
+- name: Install z-location
+  ansible.builtin.git:
+    repo: 'https://github.com/agkozak/zsh-z'
+    dest: "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z"
+  tags: *tags_for_zsh_tasks
