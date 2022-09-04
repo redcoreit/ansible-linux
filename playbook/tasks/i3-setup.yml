@@ -1,6 +1,6 @@
 - name: Install i3 and tools
   become: true
   apt:
-    name: [ "xorg", "nitrogen", "kitty", "compton", "i3" ]
+    name: [ "xorg", "nitrogen", "compton", "i3" ]
   tags:
     - i3

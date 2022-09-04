@@ -3,11 +3,6 @@
   apt: name=zsh
   tags: &tags_for_zsh_tasks [ 'install', 'productivity', 'dotfiles', 'zsh' ]
     
-- name: Change shell to zsh
-  become: true
-  shell: chsh -s $(which zsh)
-  tags: *tags_for_zsh_tasks
-
 - name: Remove .oh-my-zsh from home dir
   stat:
     path: ~/.oh-my-zsh
@@ -42,4 +37,9 @@
   ansible.builtin.git:
     repo: 'https://github.com/agkozak/zsh-z'
     dest: "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z"
+  tags: *tags_for_zsh_tasks
+
+- name: Change shell to zsh
+  become: true
+  shell: chsh -s $(which zsh)
   tags: *tags_for_zsh_tasks
