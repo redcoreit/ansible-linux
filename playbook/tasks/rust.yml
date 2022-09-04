@@ -22,7 +22,6 @@
   ignore_errors: yes
   shell: |
     /tmp/sh.rustup.rs -y
-    source ~/.cargo/env
   tags:
     - rust
     - alacritty
@@ -37,7 +36,9 @@
     - alacritty
 
 - name: Install rust nightly toolchain
-  shell: rustup toolchain install nightly
+  shell: |
+    source ~/.cargo/env
+    rustup toolchain install nightly
   tags:
     - rust
     - alacritty
