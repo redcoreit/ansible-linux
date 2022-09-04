@@ -19,6 +19,7 @@
 
 - name: Install rust/cargo
   when: cargo_exists is failed
+  ignore_errors: yes
   shell: |
     /tmp/sh.rustup.rs -y
     source ~/.cargo/env
