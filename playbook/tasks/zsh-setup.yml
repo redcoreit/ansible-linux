@@ -40,6 +40,7 @@
   tags: *tags_for_zsh_tasks
 
 - name: Change shell to zsh
+  become: true
   ansible.builtin.user:
     name: redcoreit
     shell: /usr/bin/zsh
