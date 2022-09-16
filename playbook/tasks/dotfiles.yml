@@ -21,6 +21,7 @@
 
 - name: Stow dotfiles
   shell: |
+    rm ~/.gitconfig
     chmod 700 ../scripts/stow-dotfiles
     ../scripts/stow-dotfiles
   become_user: "{{ lookup('env', 'USER') }}"

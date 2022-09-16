@@ -10,7 +10,7 @@
           3365636164386564300a616231663735303463666265353766613139353531333062363262633032
           32653337383232623361653865303635653432366163666564353365383064643466
   tags:
-  - git-basic
+  - install
 
 - name: Git personal setup name
   git_config:
@@ -18,4 +18,4 @@
     scope: global
     value: "Roland Halbaksz"
   tags:
-  - git-basic
+  - install
