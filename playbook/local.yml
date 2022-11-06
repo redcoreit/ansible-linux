@@ -26,3 +26,4 @@
     - include: tasks/dotfiles.yml
     - include: tasks/alacritty-setup.yml
     - include: tasks/productivity-tools.yml
+    - include: tasks/zathura.yml

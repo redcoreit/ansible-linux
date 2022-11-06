@@ -1,0 +1,7 @@
+- name: Install Zathura
+  become: true
+  apt:
+    name: [ "zathura" ]
+  tags:
+    - install
+    - pdf
