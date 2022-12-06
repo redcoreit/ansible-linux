@@ -33,6 +33,7 @@
     - neovim
     - core
 
+
 - name: Disable cloud-init of ubuntu
   become: true
   shell: touch /etc/cloud/cloud-init.disabled

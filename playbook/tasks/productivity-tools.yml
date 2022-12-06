@@ -1,4 +1,4 @@
-- name: Install packages
+- name: install packages
   become: true
   apt:
     name: [ "tmux", "fzf", "xclip", "screenkey", "tldr", "ripgrep", "x11-xkb-utils" ]
@@ -15,3 +15,22 @@
   tags:
     - install
     - productivity
+
+- name: install lldb
+  become: true
+  apt:
+    name: [ "lldb" ]
+  tags:
+    - install
+    - lldb
+
+# https://github.com/llvm/llvm-project/issues/55575
+- name: Create symbolic link for lldb
+  become: true
+  file:
+    src: "/usr/lib/llvm-14/lib/python3.10/dist-packages/lldb/*"
+    dest: "/usr/lib/python3/dist-packages/lldb/"
+    state: link
+  tags:
+    - install
+    - lldb
