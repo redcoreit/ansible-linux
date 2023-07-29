@@ -34,8 +34,9 @@
     - core
 
 
-- name: Disable cloud-init of ubuntu
+- name: Disable cloud-init of ubuntu server
   become: true
   shell: touch /etc/cloud/cloud-init.disabled
+  ignore_errors: yes
   tags:
     - install
