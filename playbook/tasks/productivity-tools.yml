@@ -1,7 +1,7 @@
 - name: install packages
   become: true
   apt:
-    name: [ "tmux", "fzf", "xclip", "screenkey", "tldr", "ripgrep", "x11-xkb-utils" ]
+    name: [ "tmux", "fzf", "xclip", "screenkey", "tldr", "ripgrep", "x11-xkb-utils", "dos2unix", "net-tools" ]
   tags:
     - install
     - productivity
