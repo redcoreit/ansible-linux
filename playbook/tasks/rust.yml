@@ -35,13 +35,13 @@
 #     - rust
 #     - alacritty
 
- - name: Install rust-analyzer
-   shell: |
-     . ~/.cargo/env
-     rustup component add rust-analyzer
-   tags:
-     - rust
-     - alacritty
+- name: Install rust-analyzer
+  shell: |
+    . ~/.cargo/env
+    rustup component add rust-analyzer
+  tags:
+    - rust
+    - alacritty
 
 - name: Install rust nightly toolchain
   shell: |

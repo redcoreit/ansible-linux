@@ -1,2 +1,7 @@
 #!/usr/bin/env bash
+
+sudo apt update
+sudo apt upgrade
+git config --global core.autocrlf true
+
 ansible-playbook ./playbook/local.yml --ask-vault-pass --ask-become-pass --tags install,rust

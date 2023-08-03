@@ -21,12 +21,13 @@
     src: "/usr/lib/llvm-14/lib/python3.10/dist-packages/lldb/*"
     dest: "/usr/lib/python3/dist-packages/lldb/"
     state: link
+  ignore_errors: yes
   tags:
     - install
     - lldb
 
- - name: Install broot file manager
-   shell: |
-     cargo install broot
-   tags:
-     - rust
+- name: Install broot file manager
+  shell: |
+    cargo install broot
+  tags:
+    - rust
