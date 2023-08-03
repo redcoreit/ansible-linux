@@ -27,3 +27,4 @@
     - include: tasks/alacritty-setup.yml
     - include: tasks/productivity-tools.yml
     - include: tasks/zathura.yml
+    - include: tasks/node-js.yml
