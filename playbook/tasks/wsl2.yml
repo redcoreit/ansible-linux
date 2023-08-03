@@ -1,0 +1,7 @@
+- name: Install wslu
+  become: true
+  apt:
+    name: [ "wslu" ]
+  tags:
+    - wsl2
+

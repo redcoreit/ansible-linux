@@ -28,3 +28,4 @@
     - include: tasks/productivity-tools.yml
     - include: tasks/zathura.yml
     - include: tasks/node-js.yml
+    - include: tasks/wsl2.yml
