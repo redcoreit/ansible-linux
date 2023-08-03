@@ -28,6 +28,7 @@
 
 - name: Install broot file manager
   shell: |
+    . ~/.cargo/env
     cargo install broot
   tags:
     - rust
